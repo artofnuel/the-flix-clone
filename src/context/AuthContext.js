@@ -14,8 +14,8 @@ export function AuthContextProvider({ children }) {
   const [user, setUser] = useState({});
 
   function signUp(email, password) {
-    setDoc(doc(db, "users", email), { storedMovies: [] })
     createUserWithEmailAndPassword(auth, email, password);
+    setDoc(doc(db, "users", email), { storedMovies: [] })
   }
 
   function logIn(email, password) {

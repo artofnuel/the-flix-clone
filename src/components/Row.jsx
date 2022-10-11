@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 import Movies from './Movies'
-import {MdChevronLeft, MdChevronRight} from 'react-icons/md'
+import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
 
 const Row = ({ title, fetchURL, rowID }) => {
 
@@ -16,7 +16,7 @@ const Row = ({ title, fetchURL, rowID }) => {
         // please include an [] just before the close of...
         // the function, else you'll keep calling for data forever.
     }, [fetchURL])
-    
+
     const slideLeft = () => {
         let slider = document.getElementById('slider' + rowID)
         slider.scrollLeft = slider.scrollLeft - 500
